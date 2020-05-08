@@ -1,0 +1,80 @@
+<div class="sidebar">
+    <!--
+        Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red"
+    -->
+    <div class="sidebar-wrapper">
+        <div class="logo">
+            <a href="javascript:void(0)" class="simple-text logo-mini">
+
+            </a>
+            <a href="javascript:void(0)" class="simple-text logo-normal">
+                Eldorado testnet
+            </a>
+        </div>
+        <ul class="nav">
+            {{#if (not (eq initialized true))}}
+                <li class="active">
+                    <a href="/init">
+                        <i class="tim-icons icon-settings"></i>
+                        <p>Blockchain Setup</p>
+                    </a>
+                </li>
+            {{else}}
+                <li class="{{#if (eq active "dashboard")}}active{{/if}}">
+                    <a href="/dashboard">
+                        <i class="tim-icons icon-settings"></i>
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+                <li class="{{#if (eq active "explorer")}}active{{/if}}">
+                    <a href="/explorer">
+                        <i class="tim-icons icon-puzzle-10"></i>
+                        <p>Block Explorer</p>
+                    </a>
+                </li>
+                <li class="{{#if (eq active "types")}}active{{/if}}">
+                    <a href="/type-management">
+                        <i class="tim-icons icon-pin"></i>
+                        <p>Type Management</p>
+                    </a>
+                </li>
+                <li class="{{#if (eq active "assets")}}active{{/if}}">
+                    <a href="#">
+                        <i class="tim-icons icon-puzzle-10"></i>
+                        <p>Manage Assets</p>
+                    </a>
+                </li>
+                <li class="{{#if (eq active "relationships")}}active{{/if}}">
+                    <a href="#">
+                        <i class="tim-icons icon-chart-pie-36"></i>
+                        <p>Relationships</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="tim-icons icon-atom"></i>
+                        <p>Data Dashboard</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="tim-icons icon-bell-55"></i>
+                        <p>Data Privacy</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="tim-icons icon-single-02"></i>
+                        <p>User Profile</p>
+                    </a>
+                </li>
+                <li class="active-pro">
+                    <a href="#">
+                        <i class="tim-icons icon-spaceship"></i>
+                        <p>Upgrade to PRO</p>
+                    </a>
+                </li>
+            {{/if}}
+        </ul>
+    </div>
+</div>
